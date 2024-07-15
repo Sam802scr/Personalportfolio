@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samagna-Portfolio</Samagna-Portfolio></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Samagna's Portfolio </div>
+            <div class="right">
+                <ul>
+                    <li class="main-links active-link"><a href="#firstsection">
+                            Home
+                        </a></li>
+                    <li class="main-links"><a href="#about">
+                            About</a></li>
+                    <li class="main-links"><a href="#portfolio">
+                            Projects
+                        </a></li>
+                    <li class="main-links"><a href="#contact">
+                            Contact Me
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, <span class="purple">Samagna</span> here,
+                <div>I am a</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="finp.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="ab.png" width="300px">
+                    </div>
+                    <div class="about-col-2">
+                        <p>A performance-driven and passionate individual with strong learning enthusiasm looking
+                            forward to
+                            work with a professional work driven environment which offers me opportunities to enhance my
+                            technical knowledge.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C++</span></li>
+                                <li><span>HTML,CSS</span></li>
+                                <li><span>MatLAB</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents " id="education">
+                            <ul>
+                                <li><span>BTech in Electrical and Electronics Engineering</span><br>CGPA-7.52</li>
+                                <li><span>Class 12 from Sri Chaitanya Jr. College</span><br>Percentage-97.8</li>
+                                <li><span>Class 10 from Sri Chaitanya </span><br>CGPA-10</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--------------portfolio------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="work-1.jpg" height="200">
+                        <div class="layer">
+                            <h3>Personal Portfolio</h3>
+                            <p>This personal portfolio website gives information about me and my works</p>
+                            <a href="#"><i class="fa-solid fa-laptop-code"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+        <hr>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>samagnap@gmail.com</p>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="Email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                            <span id="msg"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Samagna Potham , Made with <i class="fa-regular fa-heart"></i></p>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Pre-Final year student', 'Programming Enthusiast'],
+            typeSpeed: 75,
+        });
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('.main-links');
+
+            links.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    document.querySelector('.active-link').classList.remove('active-link');
+                });
+
+                link.addEventListener('click', () => {
+                    links.forEach(link => link.classList.remove('active-link'));
+                    link.classList.add('active-link');
+                });
+            });
+        });
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTjF6GOpTgK9fjH_G-QGQpzE0QH-p-mDDd4amLDp10gcdObDLVwAoeF2x829t1btB5/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
